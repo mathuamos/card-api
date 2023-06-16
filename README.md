@@ -41,7 +41,7 @@ Follow the instruction in the Api document to run the api calls
 3.Users -< stores users
 
 
-OrdersController is used to manage orders api
+CartController is used to manage orders api
 1.   **/v1/api/card/all** -> used to get cards 
    2. **/v1/api/card/{cardId}**  -> get specific card
 3. **/v1/card/create**  -> used to create card details
