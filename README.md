@@ -1,38 +1,61 @@
-# CARD API SERVICE
-The following was discovered as part of building this project:
-
-
 # Getting Started
-
-**Steps to run the project prerequisite**
-1. JDK 8 & maven
-2. Open application properties file and change below tags with corresponding
-
-   spring.datasource.url = CHANGE IP AND PORT TO YOUR DB
-
-   spring.datasource.username = CHANGE TO YOUR DATABASE USERNAME
-
-   spring.datasource.password = CHANGE TO YOUR DATABASE PASSWORD
-
-3.  Run project
-mvn install
-mvn package
 
 ### Reference Documentation
 For further reference, please consider the following sections:
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.7.12/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.7.12/maven-plugin/reference/html/#build-image)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.7.12/reference/htmlsingle/#web)
-* [Spring Data JPA](https://docs.spring.io/spring-boot/docs/2.7.12/reference/htmlsingle/#data.sql.jpa-and-spring-data)
+## Project Description
+Is a project that  manage the card api  through some
+API.
 
 ### Guides
-The following guides illustrate how to use some features concretely:
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
-* [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
-* [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
+## Apis
+Kindly use swagger for api reference
+http://localhost:8080/swagger-ui/index.html#/
+
+Instructions
+1. Run mvn clean install to install all the dependency
+2. Where to change db connection
+   Access application properties and changes url port username and password
+
+Test user credentions 
+
+username **amos@gmail.com** password **1234** role user
+
+username **john@gmail.com** password **1234** role admin
+
+###
+To run/build project  cd into project then  mvn spring-boot:run  to package mvn package
+
+### Kindly note
+After project start some dummy data are inserted to the in  database as required neccesary data for system user i,e
+
+Users and roles 
+
+
+Follow the instruction in the Api document to run the api calls
+
+## Entities
+1.Card -> manages card crud operations
+2.Role -> stores role of users of the system
+3.Users -< stores users
+
+
+OrdersController is used to manage orders api
+1.   **/v1/api/card/all** -> used to get cards 
+   2. **/v1/api/card/{cardId}**  -> get specific card
+3. **/v1/card/create**  -> used to create card details
+4. **/v1/card/update** -> used to update card details
+5. **/v1/card/delete** -> used to delete specific card
+
+
+UserController is used to manage recipes and cart  apis
+1. **/api/v1/login** -> authenicate user
+2. **/api/v1/token/refresh** -> refresh token for user
+
+
+
+
+
+
 

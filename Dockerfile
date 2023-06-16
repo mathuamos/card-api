@@ -1,7 +1,7 @@
-FROM openjdk:8-jre-alpine
-COPY target/card-api-1.jar app.jar
+FROM openjdk:11
 EXPOSE 8080
+ARG JAR_FILE=target/card-api.jar
+COPY ${JAR_FILE} card-api.jar
 ENV TZ="Africa/Nairobi"
 RUN date
-ENTRYPOINT ["java","-jar","/app.jar"]
-RUN apk add --no-cache openssh-client
+ENTRYPOINT ["java","-jar","/card-api.jar"]
