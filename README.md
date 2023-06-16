@@ -18,7 +18,7 @@ Instructions
 2. Where to change db connection
    Access application properties and changes url port username and password
 
-Test user credentions 
+Test user credentials 
 
 username **amos@gmail.com** password **1234** role user
 
